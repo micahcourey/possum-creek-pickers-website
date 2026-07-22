@@ -1,0 +1,233 @@
+---
+export interface Props {
+  name: string;
+  role: string;
+  instrument: string;
+  bio: string;
+  badge?: string;
+  iconType: 'mandolin' | 'guitar' | 'bass';
+}
+
+const { name, role, instrument, bio, badge, iconType } = Astro.props;
+---
+
+<div class="glass-card member-card">
+  <div class="member-header">
+    <div class="member-avatar" title={`${instrument} icon`}>
+      {iconType === 'guitar' && (
+        /* Perfectly Centered Acoustic Dreadnought Guitar SVG */
+        <svg class="instrument-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Headstock & Pegs -->
+          <rect x="28.5" y="5" width="7" height="9" rx="1.5" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="26" cy="7" r="1.2" fill="currentColor"/>
+          <circle cx="38" cy="7" r="1.2" fill="currentColor"/>
+          <circle cx="26" cy="9.5" r="1.2" fill="currentColor"/>
+          <circle cx="38" cy="9.5" r="1.2" fill="currentColor"/>
+          <circle cx="26" cy="12" r="1.2" fill="currentColor"/>
+          <circle cx="38" cy="12" r="1.2" fill="currentColor"/>
+          <!-- Neck & Frets -->
+          <rect x="29.5" y="14" width="5" height="18" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="29.5" y1="18" x2="34.5" y2="18" stroke="currentColor" stroke-width="1"/>
+          <line x1="29.5" y1="22" x2="34.5" y2="22" stroke="currentColor" stroke-width="1"/>
+          <line x1="29.5" y1="26" x2="34.5" y2="26" stroke="currentColor" stroke-width="1"/>
+          <line x1="29.5" y1="30" x2="34.5" y2="30" stroke="currentColor" stroke-width="1"/>
+          <!-- Body -->
+          <path d="M 32 32 C 26 32 22 35 24 41 C 21 44 19 49 22 54 C 25 59 39 59 42 54 C 45 49 43 44 40 41 C 42 35 38 32 32 32 Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- Soundhole -->
+          <circle cx="32" cy="42" r="4" fill="currentColor" fill-opacity="0.5" stroke="currentColor" stroke-width="1.4"/>
+          <!-- Pickguard -->
+          <path d="M 34 43 C 37 44 38 47 36 50 C 34 49 33 46 34 43 Z" fill="currentColor" fill-opacity="0.5"/>
+          <!-- Bridge -->
+          <rect x="26" y="52" width="12" height="2.5" rx="1" fill="currentColor"/>
+          <!-- Strings -->
+          <line x1="31" y1="14" x2="31" y2="52" stroke="currentColor" stroke-width="0.8" opacity="0.85"/>
+          <line x1="33" y1="14" x2="33" y2="52" stroke="currentColor" stroke-width="0.8" opacity="0.85"/>
+        </svg>
+      )}
+
+      {iconType === 'mandolin' && (
+        /* Perfectly Centered Teardrop / F-Style Mandolin SVG */
+        <svg class="instrument-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Headstock & 8 Pegs -->
+          <path d="M 28 4 H 36 V 11 H 28 Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="26" cy="5.5" r="1" fill="currentColor"/>
+          <circle cx="38" cy="5.5" r="1" fill="currentColor"/>
+          <circle cx="26" cy="7.2" r="1" fill="currentColor"/>
+          <circle cx="38" cy="7.2" r="1" fill="currentColor"/>
+          <circle cx="26" cy="8.9" r="1" fill="currentColor"/>
+          <circle cx="38" cy="8.9" r="1" fill="currentColor"/>
+          <!-- Neck -->
+          <rect x="29.5" y="11" width="5" height="17" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="29.5" y1="15" x2="34.5" y2="15" stroke="currentColor" stroke-width="1"/>
+          <line x1="29.5" y1="19" x2="34.5" y2="19" stroke="currentColor" stroke-width="1"/>
+          <line x1="29.5" y1="23" x2="34.5" y2="23" stroke="currentColor" stroke-width="1"/>
+          <!-- Teardrop Body -->
+          <path d="M 32 28 C 22 30 17 38 17 46 C 17 54 23 59 32 59 C 41 59 47 54 47 46 C 47 38 42 30 32 28 Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- F-Holes -->
+          <path d="M 23 40 C 22 42 23 45 24 47" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M 41 40 C 42 42 41 45 40 47" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Floating Bridge & Tailpiece -->
+          <line x1="25" y1="48" x2="39" y2="48" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <polygon points="29,54 35,54 32,59" fill="currentColor"/>
+          <!-- Strings -->
+          <line x1="31" y1="11" x2="31" y2="54" stroke="currentColor" stroke-width="0.8"/>
+          <line x1="33" y1="11" x2="33" y2="54" stroke="currentColor" stroke-width="0.8"/>
+        </svg>
+      )}
+
+      {iconType === 'bass' && (
+        /* Perfectly Centered Upright Double Bass SVG */
+        <svg class="instrument-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Scroll Head -->
+          <circle cx="32" cy="5" r="2.5" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.3"/>
+          <!-- Pegbox & Keys -->
+          <rect x="30" y="7.5" width="4" height="6" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="27.5" cy="9.5" r="1.4" fill="currentColor"/>
+          <circle cx="36.5" cy="9.5" r="1.4" fill="currentColor"/>
+          <circle cx="27.5" cy="11.5" r="1.4" fill="currentColor"/>
+          <circle cx="36.5" cy="11.5" r="1.4" fill="currentColor"/>
+          <!-- Long Bass Fingerboard & Neck -->
+          <rect x="30.5" y="13.5" width="3" height="17" fill="currentColor" fill-opacity="0.4" stroke="currentColor" stroke-width="1.4"/>
+          <!-- Double Bass Body (Bouts & Waist) -->
+          <path d="M 32 30.5 C 26 30.5 21 34 22 40 C 23 42 22 44 19 46 C 16 49 17 54 22 57 C 26 59.5 38 59.5 42 57 C 47 54 48 49 45 46 C 42 44 41 42 42 40 C 43 34 38 30.5 32 30.5 Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- Classic F-Holes -->
+          <path d="M 25 41 C 24 43 25 47 26 49" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M 39 41 C 40 43 39 47 38 49" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Wooden Bridge & Tailpiece -->
+          <line x1="26" y1="48" x2="38" y2="48" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <polygon points="30,52 34,52 32,57" fill="currentColor"/>
+          <!-- Endpin Spike -->
+          <line x1="32" y1="57" x2="32" y2="61" stroke="currentColor" stroke-width="2"/>
+          <!-- Strings -->
+          <line x1="31.5" y1="13.5" x2="31.5" y2="52" stroke="currentColor" stroke-width="0.9"/>
+          <line x1="32.5" y1="13.5" x2="32.5" y2="52" stroke="currentColor" stroke-width="0.9"/>
+        </svg>
+      )}
+    </div>
+
+    {badge && <span class="badge badge-amber">{badge}</span>}
+  </div>
+
+  <div class="member-info">
+    <h3 class="member-name">{name}</h3>
+    <p class="member-role">{role}</p>
+    <div class="instrument-tag">
+      <span class="instrument-icon-dot"></span>
+      <span>{instrument}</span>
+    </div>
+    <p class="member-bio">{bio}</p>
+  </div>
+</div>
+
+<style>
+  .member-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--amber-gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .member-card:hover::before {
+    opacity: 1;
+  }
+
+  .member-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .member-avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: var(--radius-md);
+    background: radial-gradient(circle at center, rgba(229, 152, 25, 0.22) 0%, rgba(20, 16, 12, 0.95) 100%);
+    border: 1px solid var(--border-glass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--amber-glow);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .member-card:hover .member-avatar {
+    transform: translateY(-2px) scale(1.04);
+    border-color: var(--amber-gold);
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(229, 152, 25, 0.3);
+  }
+
+  .instrument-svg {
+    width: 52px;
+    height: 52px;
+    display: block;
+    margin: auto;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+  }
+
+  .member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .member-name {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--text-main);
+  }
+
+  .member-role {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--amber-glow);
+  }
+
+  .instrument-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 245, 230, 0.05);
+    color: var(--text-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: fit-content;
+    margin-top: 0.2rem;
+    border: 1px solid rgba(255, 245, 230, 0.1);
+  }
+
+  .instrument-icon-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: var(--amber-gold);
+    box-shadow: 0 0 6px var(--amber-gold);
+  }
+
+  .member-bio {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+  }
+</style>

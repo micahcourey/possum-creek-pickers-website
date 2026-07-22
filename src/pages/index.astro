@@ -1,0 +1,683 @@
+---
+import Layout from '../layouts/Layout.astro';
+import YouTubeGallery from '../components/YouTubeGallery.astro';
+import BandMemberCard from '../components/BandMemberCard.astro';
+---
+
+<Layout title="Home">
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-bg-wrapper">
+      <img 
+        src="/assets/band_live.JPEG" 
+        alt="Possum Creek Pickers live performance in Chattanooga" 
+        class="hero-bg-img"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <!-- Dual Badges requested by user -->
+        <div class="hero-badges">
+          <div class="badge badge-amber animate-glow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            High-energy bluegrass and acoustic grooves
+          </div>
+
+          <div class="badge badge-earth">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Chattanooga, TN
+          </div>
+        </div>
+
+        <div class="hero-logo-box">
+          <img 
+            src="/assets/band_logo.png" 
+            alt="Possum Creek Pickers" 
+            class="hero-logo-img"
+            width="420"
+            height="140"
+          />
+        </div>
+
+        <h1 class="hero-title">
+          Authentic Picking Born on the Banks of <span class="gradient-text-gold">Possum Creek</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          High-energy bluegrass flatpicking, soaring mandolin leads, and driving acoustic bass lines from Chattanooga, Tennessee.
+        </p>
+
+        <div class="hero-actions">
+          <a href="/epk" class="btn btn-primary">
+            Explore Press Kit (EPK)
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          
+          <a href="#videos" class="btn btn-secondary">
+            Watch Performances
+          </a>
+
+          <a 
+            href="https://www.instagram.com/possumcreekpickers" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn btn-instagram"
+          >
+            <svg class="instagram-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+            @possumcreekpickers
+          </a>
+        </div>
+
+        <div class="hero-quick-lineup">
+          <span class="lineup-item"><strong>Elliott Brown</strong> — Guitar / Lead Vocals</span>
+          <span class="lineup-divider">•</span>
+          <span class="lineup-item"><strong>Micah Courey</strong> — Mandolin / Backup Vocals</span>
+          <span class="lineup-divider">•</span>
+          <span class="lineup-item"><strong>Kevin Taylor</strong> — Bass / Backup Vocals</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORIGIN & STORY SECTION -->
+  <section class="section story-section" id="origin">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-image-wrap glass-card">
+          <img 
+            src="/assets/band_live.JPEG" 
+            alt="Possum Creek Pickers performing live on stage" 
+            class="story-img"
+          />
+          <div class="image-caption-bar">
+            <span>Possum Creek Pickers Live in Action</span>
+            <span class="location-badge">Chattanooga, TN</span>
+          </div>
+        </div>
+
+        <div class="story-content">
+          <span class="badge badge-amber">Our Story & Roots</span>
+          <h2 class="section-heading gradient-text">Jamming on the Banks of Possum Creek</h2>
+          
+          <p class="story-text">
+            Long before festival lights and crowded venue stages, <strong>Possum Creek Pickers</strong> began as a group of lifelong friends gathering along the banks of Possum Creek in Hamilton County, Tennessee. Wrapped in the quiet beauty of Chattanooga’s waterways, night after night of porch pickin' turned casual jams into a refined, high-octane bluegrass sound.
+          </p>
+          
+          <p class="story-text">
+            Blending traditional Appalachian picking traditions with fresh acoustic energy, the band brings together flatpicking guitar drive, rhythmic upright bass, and sweet mandolin chops backed by tight vocal harmonies.
+          </p>
+
+          <div class="origin-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Chattanooga Roots</h4>
+                <p>Born and raised in East Tennessee acoustics</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Pure Acoustic Power</h4>
+                <p>Mandolin, Acoustic Guitar, Upright Bass & Harmonies</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-cta">
+            <a href="/epk" class="btn btn-primary btn-sm">Read Full EPK Biography</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAND ROSTER OVERVIEW -->
+  <section class="section roster-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-amber">The Musicians</span>
+        <h2 class="section-title gradient-text">Meet The Pickers</h2>
+        <p class="section-subtitle">Three distinct acoustic voices coming together in harmony.</p>
+      </div>
+
+      <div class="roster-grid">
+        <BandMemberCard 
+          name="Elliott Brown"
+          role="Lead Vocals & Guitar"
+          instrument="Acoustic Guitar"
+          bio="Driving the band rhythm and soaring vocal leads, Elliott brings heart and soul to every melody."
+          badge="Lead Vocals"
+          iconType="guitar"
+        />
+
+        <BandMemberCard 
+          name="Micah Courey"
+          role="Mandolin & Backup Vocals"
+          instrument="Mandolin"
+          bio="Crafting chop rhythms and blistering lead runs that give Possum Creek Pickers its signature high lonesome sparkle."
+          badge="Mandolin Lead"
+          iconType="mandolin"
+        />
+
+        <BandMemberCard 
+          name="Kevin Taylor"
+          role="Bass & Backup Vocals"
+          instrument="Upright Bass"
+          bio="Laying down the deep acoustic foundation and driving rhythm pulse that keeps audiences stomping their feet."
+          badge="Bass & Groove"
+          iconType="bass"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE VIDEO SECTION -->
+  <YouTubeGallery />
+
+  <!-- TOUR DATES: COMING SOON TO A VENUE NEAR YOU -->
+  <section class="section shows-section" id="shows">
+    <div class="container">
+      <div class="glass-card tour-coming-card">
+        <div class="tour-header text-center">
+          <span class="badge badge-earth">Live Shows & Booking</span>
+          <h2 class="section-title gradient-text-gold">Coming Soon To A Venue Near You!</h2>
+          <p class="tour-subtitle">
+            Possum Creek Pickers are preparing their upcoming live tour schedule across Tennessee, Georgia, North Carolina, and the Southeast. 
+          </p>
+        </div>
+
+        <div class="tour-grid">
+          <div class="tour-info-box">
+            <div class="info-badge-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Book Possum Creek Pickers In Your Town</h3>
+            <p>
+              We are actively accepting bookings for festivals, music halls, listening rooms, breweries, and private events. Bring authentic Chattanooga bluegrass picking to your stage!
+            </p>
+            <div class="tour-actions">
+              <a href="/epk#booking" class="btn btn-primary">
+                Book The Band (EPK)
+              </a>
+              <a href="mailto:booking@possumcreekpickers.com" class="btn btn-secondary">
+                Request A Show
+              </a>
+            </div>
+          </div>
+
+          <div class="tour-social-box">
+            <div class="social-box-inner">
+              <svg class="insta-big-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+              <h4>Be First to Hear Tour Announcements</h4>
+              <p>Follow <strong>@possumcreekpickers</strong> on Instagram to get show announcements, venue dates, and ticket links as soon as they drop!</p>
+              <a 
+                href="https://www.instagram.com/possumcreekpickers" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-instagram btn-sm"
+              >
+                Follow @possumcreekpickers
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM CALLOUT BANNER -->
+  <section class="section insta-banner-section">
+    <div class="container">
+      <div class="glass-card insta-card">
+        <div class="insta-content">
+          <div class="insta-icon-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+          </div>
+          <div>
+            <h2 class="insta-title">Follow Our Possum Creek Journeys</h2>
+            <p class="insta-subtitle">Get behind-the-scenes rehearsal clips, show announcements, and porch jams on Instagram.</p>
+            <p class="insta-handle"><strong>@possumcreekpickers</strong></p>
+          </div>
+        </div>
+
+        <a 
+          href="https://www.instagram.com/possumcreekpickers" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-instagram"
+        >
+          Follow @possumcreekpickers
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+  }
+
+  .hero-bg-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    filter: brightness(0.38) contrast(1.15);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 50% 50%, rgba(10, 8, 5, 0.45) 0%, rgba(10, 8, 5, 0.96) 90%),
+      linear-gradient(to bottom, rgba(10, 8, 5, 0.7) 0%, rgba(10, 8, 5, 0.96) 100%);
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hero-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-logo-box {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-logo-img {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 8px 24px rgba(229, 152, 25, 0.45));
+  }
+
+  .hero-title {
+    font-size: 3.25rem;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 680px;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  .hero-quick-lineup {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(24, 18, 13, 0.8);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-glass);
+    backdrop-filter: blur(12px);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .lineup-item strong {
+    color: var(--amber-glow);
+  }
+
+  .lineup-divider {
+    color: rgba(229, 152, 25, 0.4);
+  }
+
+  /* Story Section */
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .story-image-wrap {
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4 / 3;
+  }
+
+  .story-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .story-image-wrap:hover .story-img {
+    transform: scale(1.04);
+  }
+
+  .image-caption-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 8, 5, 0.92);
+    backdrop-filter: blur(8px);
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--text-main);
+    border-top: 1px solid var(--border-glass);
+  }
+
+  .location-badge {
+    color: var(--amber-glow);
+    font-weight: 700;
+  }
+
+  .story-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .section-heading {
+    font-size: 2.4rem;
+    font-weight: 800;
+  }
+
+  .story-text {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .story-text strong {
+    color: var(--text-main);
+  }
+
+  .origin-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+  }
+
+  .highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: rgba(255, 245, 230, 0.03);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 245, 230, 0.08);
+  }
+
+  .highlight-icon {
+    background: rgba(229, 152, 25, 0.18);
+    color: var(--amber-glow);
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    display: flex;
+  }
+
+  .highlight-item h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.2rem;
+  }
+
+  .highlight-item p {
+    font-size: 0.825rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .story-cta {
+    margin-top: 0.5rem;
+  }
+
+  /* Roster Section */
+  .roster-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  /* Tour Coming Soon Card */
+  .tour-coming-card {
+    padding: 3.5rem;
+    background: linear-gradient(135deg, rgba(24, 18, 13, 0.9), rgba(58, 40, 26, 0.6));
+  }
+
+  .tour-subtitle {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    margin-top: 0.75rem;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tour-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    align-items: center;
+  }
+
+  .tour-info-box {
+    background: rgba(255, 245, 230, 0.03);
+    border: 1px solid rgba(229, 152, 25, 0.2);
+    border-radius: var(--radius-md);
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .info-badge-icon {
+    background: rgba(229, 152, 25, 0.2);
+    color: var(--amber-glow);
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(229, 152, 25, 0.3);
+  }
+
+  .tour-info-box h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-main);
+  }
+
+  .tour-info-box p {
+    color: var(--text-muted);
+    font-size: 1.025rem;
+    line-height: 1.6;
+  }
+
+  .tour-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  .tour-social-box {
+    background: linear-gradient(135deg, rgba(131, 58, 180, 0.15), rgba(253, 29, 29, 0.15));
+    border: 1px solid rgba(253, 29, 29, 0.3);
+    border-radius: var(--radius-md);
+    padding: 2.25rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .social-box-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .insta-big-icon {
+    color: #fd1d1d;
+  }
+
+  .social-box-inner h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+
+  .social-box-inner p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Instagram Banner */
+  .insta-card {
+    padding: 3rem 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: linear-gradient(135deg, rgba(131, 58, 180, 0.15), rgba(253, 29, 29, 0.12), rgba(24, 18, 13, 0.9));
+    border-color: rgba(253, 29, 29, 0.3);
+  }
+
+  .insta-content {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .insta-icon-badge {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(253, 29, 29, 0.35);
+  }
+
+  .insta-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+  }
+
+  .insta-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .insta-handle {
+    color: var(--amber-glow);
+    font-size: 1.1rem;
+  }
+
+  /* Responsiveness */
+  @media (max-width: 992px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    .story-grid {
+      grid-template-columns: 1fr;
+    }
+    .roster-grid {
+      grid-template-columns: 1fr;
+    }
+    .tour-grid {
+      grid-template-columns: 1fr;
+    }
+    .insta-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+    }
+    .insta-content {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    .tour-coming-card {
+      padding: 1.75rem;
+    }
+    .origin-highlights {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
