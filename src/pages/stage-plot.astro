@@ -1,16 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 ---
 
 <Layout 
-  title="Stage Plot & Technical Rider | Possum Creek Pickers"
+  title="Stage Plot & Technical Rider"
   description="Official Stage Plot, Input Patch List, and Technical Rider for Possum Creek Pickers bluegrass band."
 >
-  <Header />
-
-  <main class="stage-plot-page">
+  <div class="stage-plot-page">
     <section class="section hero-compact">
       <div class="container">
         <div class="glass-card hero-card">
@@ -142,9 +138,7 @@ import Footer from '../components/Footer.astro';
         </div>
       </div>
     </section>
-  </main>
-
-  <Footer />
+  </div>
 </Layout>
 
 <style>
