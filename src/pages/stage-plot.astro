@@ -1,0 +1,273 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Stage Plot & Technical Rider | Possum Creek Pickers"
+  description="Official Stage Plot, Input Patch List, and Technical Rider for Possum Creek Pickers bluegrass band."
+>
+  <Header />
+
+  <main class="stage-plot-page">
+    <section class="section hero-compact">
+      <div class="container">
+        <div class="glass-card hero-card">
+          <span class="badge badge-burgundy">Festival & Venue Sound Techs</span>
+          <h1 class="epk-main-title">Official Stage Plot & Tech Rider</h1>
+          <p class="epk-tagline">Complete stage setup, channel input patch list, and technical requirements for Possum Creek Pickers.</p>
+          
+          <div class="action-bar">
+            <a 
+              href="/assets/possum_creek_stage_plot.png" 
+              target="_blank" 
+              class="btn btn-primary"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Stage Plot Image (PNG)
+            </a>
+            
+            <a 
+              href="/epk#booking" 
+              class="btn btn-secondary"
+            >
+              Contact Sound / Booking
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL RESOLUTION STAGE PLOT DIAGRAM -->
+    <section class="section plot-diagram-section">
+      <div class="container">
+        <div class="glass-card diagram-card">
+          <div class="diagram-header">
+            <h2>Stage Plot Visual Diagram</h2>
+            <p>Direct high-resolution diagram for venue sound engineers and festival stage managers.</p>
+          </div>
+
+          <div class="diagram-wrapper">
+            <img 
+              src="/assets/possum_creek_stage_plot.png?v=plot1" 
+              alt="Possum Creek Pickers Official Stage Plot and Technical Rider" 
+              class="stage-plot-img"
+              width="1600"
+              height="1200"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILED INPUT CHANNEL TABLE & SPECS -->
+    <section class="section plot-details-section">
+      <div class="container">
+        <div class="details-grid">
+          <div class="glass-card tech-card">
+            <h3>Input Channel Patch List</h3>
+            <div class="table-responsive">
+              <table class="patch-table">
+                <thead>
+                  <tr>
+                    <th>Channel</th>
+                    <th>Source</th>
+                    <th>Performer</th>
+                    <th>Microphone / DI Specs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="ch-tag">CH 1</span></td>
+                    <td><strong>Lead Vocals</strong></td>
+                    <td>Elliott Brown</td>
+                    <td>Shure SM58 / Equivalent (Boom Stand)</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ch-tag">CH 2</span></td>
+                    <td><strong>Acoustic Guitar</strong></td>
+                    <td>Elliott Brown</td>
+                    <td>Active DI Box or Instrument Mic</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ch-tag">CH 3</span></td>
+                    <td><strong>Backup Vocals</strong></td>
+                    <td>Micah Courey</td>
+                    <td>Shure SM58 / Equivalent (Boom Stand)</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ch-tag">CH 4</span></td>
+                    <td><strong>Mandolin</strong></td>
+                    <td>Micah Courey</td>
+                    <td>Active DI Box or Instrument Condenser Mic</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ch-tag">CH 5</span></td>
+                    <td><strong>Backup Vocals</strong></td>
+                    <td>Kevin Taylor</td>
+                    <td>Shure SM58 / Equivalent (Boom Stand)</td>
+                  </tr>
+                  <tr>
+                    <td><span class="ch-tag">CH 6</span></td>
+                    <td><strong>Upright Bass</strong></td>
+                    <td>Kevin Taylor</td>
+                    <td>Bass Pickup DI Box / Mic</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="glass-card specs-card">
+            <h3>Technical Requirements</h3>
+            <ul class="specs-list">
+              <li>
+                <strong>AC Power:</strong> 1x standard 120V AC quad outlet located at stage center.
+              </li>
+              <li>
+                <strong>Monitor Mixes:</strong> 2 to 3 independent monitor mixes (Center vocal, Left guitar/mando, Right bass).
+              </li>
+              <li>
+                <strong>PA System:</strong> Stereo PA system suited for venue capacity with clean headroom.
+              </li>
+              <li>
+                <strong>Soundcheck:</strong> 15–20 minutes preferred soundcheck prior to showtime.
+              </li>
+              <li>
+                <strong>Acoustic Environment:</strong> Suitable for both full PA amplification and natural acoustic stages.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .stage-plot-page {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-compact {
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-card {
+    padding: 3rem;
+  }
+
+  .action-bar {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .diagram-card {
+    padding: 2.5rem;
+  }
+
+  .diagram-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .diagram-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+  }
+
+  .diagram-wrapper {
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(27, 67, 44, 0.2);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  }
+
+  .stage-plot-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+  }
+
+  .tech-card, .specs-card {
+    padding: 2.25rem;
+  }
+
+  .tech-card h3, .specs-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    color: var(--text-main);
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .patch-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .patch-table th, .patch-table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(27, 67, 44, 0.12);
+  }
+
+  .patch-table th {
+    background: rgba(27, 67, 44, 0.06);
+    color: var(--forest-green);
+    font-weight: 800;
+  }
+
+  .ch-tag {
+    display: inline-block;
+    background: var(--burgundy-red);
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+  }
+
+  .specs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .specs-list li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+
+  }
+
+  .specs-list strong {
+    color: var(--forest-green);
+  }
+
+  @media (max-width: 900px) {
+    .details-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
