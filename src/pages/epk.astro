@@ -45,7 +45,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           </div>
           <div class="stat-box">
             <span class="stat-label">Active Since</span>
-            <span class="stat-value">Local Bank Jams</span>
+            <span class="stat-value">2026</span>
           </div>
           <div class="stat-box">
             <span class="stat-label">Members</span>
@@ -310,7 +310,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
             </div>
             <h3>Email Booking</h3>
             <p>Direct inquiries to our management:</p>
-            <a href="mailto:booking@possumcreekpickers.com" class="contact-link">booking@possumcreekpickers.com</a>
+            <a href="mailto:possumcreekpickers@gmail.com" class="contact-link">possumcreekpickers@gmail.com</a>
           </div>
 
           <div class="contact-card">
@@ -330,9 +330,6 @@ import BandMemberCard from '../components/BandMemberCard.astro';
             <p>Based in East Tennessee:</p>
             <span class="contact-text">Chattanooga, TN</span>
           </div>
-        </div>
-      </div>
-    </div>
   </section>
 </Layout>
 
@@ -348,7 +345,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.7));
+    background: linear-gradient(135deg, rgba(255, 253, 248, 0.95), rgba(238, 233, 220, 0.9));
   }
 
   .epk-header-top {
@@ -364,11 +361,13 @@ import BandMemberCard from '../components/BandMemberCard.astro';
     font-weight: 900;
     margin-top: 0.5rem;
     margin-bottom: 0.25rem;
+    color: var(--text-main);
+    padding-top: 8px;
   }
 
   .epk-tagline {
     font-size: 1.25rem;
-    color: var(--text-light);
+    color: var(--text-muted);
   }
 
   .epk-quick-stats {
@@ -389,7 +388,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--amber-gold);
+    color: var(--forest-green);
     font-weight: 700;
   }
 
@@ -418,7 +417,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   .bio-subtitle {
     font-size: 1.6rem;
     font-weight: 800;
-    color: var(--amber-glow);
+    color: var(--forest-green);
     margin-bottom: 1rem;
   }
 
@@ -431,7 +430,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
 
   .bio-p.lead {
     font-size: 1.15rem;
-    color: var(--text-light);
+    color: var(--text-main);
   }
 
   .bio-p strong {
@@ -486,7 +485,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    background: rgba(8, 12, 20, 0.7);
+    background: rgba(238, 233, 220, 0.6);
     border-bottom: 1px solid var(--border-glass);
   }
 
@@ -494,7 +493,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
     max-height: 140px;
     width: auto;
     object-fit: contain;
-    filter: drop-shadow(0 4px 15px rgba(245, 158, 11, 0.3));
+    filter: drop-shadow(0 4px 15px rgba(27, 67, 44, 0.2));
   }
 
   .asset-img-photo {
@@ -543,6 +542,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   .tech-title {
     font-size: 2rem;
     font-weight: 800;
+    padding-top: 8px;
   }
 
   .tech-desc {
@@ -557,18 +557,18 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   }
 
   .rider-box {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(27, 67, 44, 0.04);
+    border: 1px solid rgba(27, 67, 44, 0.12);
     border-radius: var(--radius-md);
     padding: 1.75rem;
   }
 
   .rider-box h4 {
     font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--amber-gold);
+    font-weight: 800;
+    color: var(--forest-green);
     margin-bottom: 1.25rem;
-    border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+    border-bottom: 1px solid rgba(27, 67, 44, 0.2);
     padding-bottom: 0.5rem;
   }
 
@@ -586,8 +586,8 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   }
 
   .ch-num {
-    background: rgba(245, 158, 11, 0.2);
-    color: var(--amber-glow);
+    background: rgba(27, 67, 44, 0.12);
+    color: var(--forest-green);
     font-weight: 800;
     font-size: 0.8rem;
     padding: 0.3rem 0.6rem;
@@ -614,7 +614,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   }
 
   .rider-info-content strong {
-    color: var(--amber-glow);
+    color: var(--forest-green);
   }
 
   /* Booking Section */
@@ -630,8 +630,8 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   }
 
   .contact-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(27, 67, 44, 0.04);
+    border: 1px solid rgba(27, 67, 44, 0.12);
     border-radius: var(--radius-md);
     padding: 2rem;
     display: flex;
@@ -644,13 +644,13 @@ import BandMemberCard from '../components/BandMemberCard.astro';
 
   .contact-card:hover {
     transform: translateY(-4px);
-    border-color: var(--amber-gold);
+    border-color: var(--forest-green);
   }
 
   .contact-icon {
-    background: rgba(245, 158, 11, 0.15);
-    color: var(--amber-glow);
-    padding: 1rem;
+    background: rgba(27, 67, 44, 0.12);
+    color: var(--forest-green);
+    padding: 1.0rem;
     border-radius: var(--radius-full);
     display: flex;
     align-items: center;
@@ -659,8 +659,8 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   }
 
   .insta-icon-bg {
-    background: linear-gradient(135deg, rgba(131, 58, 180, 0.2), rgba(253, 29, 29, 0.2));
-    color: #fd1d1d;
+    background: rgba(27, 67, 44, 0.12);
+    color: var(--forest-green);
   }
 
   .contact-card h3 {
@@ -674,15 +674,14 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   }
 
   .contact-link {
-    color: var(--amber-glow);
+    color: var(--forest-green);
     font-weight: 700;
     font-size: 1.05rem;
-
   }
 
   .contact-link:hover {
     text-decoration: underline;
-    color: #fff;
+    color: var(--wood-mahogany);
   }
 
   .contact-text {
