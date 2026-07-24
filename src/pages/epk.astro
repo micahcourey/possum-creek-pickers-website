@@ -69,28 +69,32 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           <div class="bio-text-column">
             <h3 class="bio-subtitle">Born on the Banks of Possum Creek</h3>
             <p class="bio-p lead">
-              <strong>Possum Creek Pickers</strong> are an authentic bluegrass and acoustic band rooted in the scenic river valleys of <strong>Chattanooga, Tennessee</strong>. The band’s origin is as genuine as their sound: long before playing festivals and listening rooms, the members started out as close friends jamming on the tranquil banks of Possum Creek in Hamilton County, where their name was born.
+              The <strong>Possum Creek Pickers</strong> came to fruition on the banks of Possum Creek in Soddy Daisy following the unexpected loss of a close friend. Childhood friends Elliott Brown and Micah Courey had played music together since elementary school, and that tragic moment brought a clear realization: tomorrow is never guaranteed. Looking to fill a void that only music could heal, they committed to playing bluegrass regularly to keep their connection strong.
             </p>
             
             <p class="bio-p">
-              Driven by a shared love for timeless Appalachian acoustics, high-energy flatpicking, and soulful vocal arrangements, Possum Creek Pickers deliver a rich performance that bridges traditional bluegrass roots with lively contemporary acoustic pickin'.
+              Before long, Micah made the switch from guitar to mandolin, seamlessly adapting his decades of musical experience to the new instrument. What started as fire pit jams with friends along the creek quickly grew into a neighborhood institution.
             </p>
 
             <p class="bio-p">
-              Whether performing intimate acoustic sets or high-energy mainstage festival slots, Possum Creek Pickers captivate audiences with fast-tempo instrumental breakdowns, high lonesome mandolin leads, and three-part vocal harmonies that echo the heart of East Tennessee.
+              The final piece fell into place at the Tuesday Night Bluegrass Jam at The Barrelhouse Ballroom in downtown Chattanooga, where they met Kevin Taylor. The instant connection was undeniable. A Chattanooga native skilled on both guitar and electric bass, Kevin soon joined as the band's bassist and recently added an upright bass to his setup to help fully round out the signature Possum Creek Pickers bluegrass sound.
+            </p>
+
+            <p class="bio-p">
+              Today, Possum Creek Pickers deliver high-energy bluegrass that effortlessly blends elements of blues and reggae, creating a signature acoustic sound uniquely their own.
             </p>
           </div>
 
           <div class="bio-sidebar-column">
             <div class="photo-card glass-card">
               <img 
-                src="/assets/band_live.JPEG" 
-                alt="Possum Creek Pickers performing live in Chattanooga" 
+                src="/assets/band_photo_2026_portrait.JPG" 
+                alt="Possum Creek Pickers band portrait photo" 
                 class="epk-photo-img"
               />
               <div class="photo-info">
-                <span class="photo-title">Live Performance Photo</span>
-                <a href="/assets/band_live.JPEG" download="possum_creek_pickers_live.JPEG" class="btn btn-secondary btn-sm photo-download-btn">
+                <span class="photo-title">Official Band Photo (Portrait)</span>
+                <a href="/assets/band_photo_2026_portrait.JPG" download="possum_creek_pickers_portrait.JPG" class="btn btn-secondary btn-sm photo-download-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                   Download Hi-Res Photo
                 </a>
@@ -117,8 +121,8 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           role="Lead Vocals & Guitar"
           instrument="Acoustic Guitar"
           bio="Elliott leads the band's vocal melodies and rhythmic acoustic engine with powerful flatpicking and genuine storytelling."
-          badge="Lead Vocals"
           iconType="guitar"
+          photoSrc="/assets/elliott_crop.jpg"
         />
 
         <BandMemberCard 
@@ -126,8 +130,8 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           role="Mandolin & Backup Vocals"
           instrument="Mandolin"
           bio="Micah delivers intricate mandolin chops, lightning lead runs, and tight harmony backing vocals."
-          badge="Mandolin"
           iconType="mandolin"
+          photoSrc="/assets/micah_crop.jpg"
         />
 
         <BandMemberCard 
@@ -135,8 +139,8 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           role="Bass & Backup Vocals"
           instrument="Bass"
           bio="Kevin grounds the band with deep acoustic bass grooves and solid vocal support that drives the rhythmic engine."
-          badge="Bass"
           iconType="bass"
+          photoSrc="/assets/kevin_crop.jpg"
         />
       </div>
     </div>
@@ -170,19 +174,55 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           </div>
         </div>
 
-        <!-- Live Photo Asset Card -->
+        <!-- Landscape Band Photo Card -->
         <div class="glass-card asset-card">
           <div class="asset-preview photo-preview">
-            <img src="/assets/band_live.JPEG" alt="Possum Creek Pickers Band Live Performance" class="asset-img-photo" />
+            <img src="/assets/band_photo_2026_landscape.JPG" alt="Possum Creek Pickers Band Photo (Landscape)" class="asset-img-photo" />
           </div>
           <div class="asset-details">
-            <h3 class="asset-name">Live Performance Publicity Photo</h3>
-            <p class="asset-meta">JPEG Format • 300 DPI High-Res • Stage Photography</p>
+            <h3 class="asset-name">Band Publicity Photo (Landscape)</h3>
+            <p class="asset-meta">JPG Format • High Resolution • Horizontal Layout</p>
+            <div class="asset-actions">
+              <a href="/assets/band_photo_2026_landscape.JPG" target="_blank" class="btn btn-secondary btn-sm">Preview</a>
+              <a href="/assets/band_photo_2026_landscape.JPG" download="possum_creek_pickers_landscape.JPG" class="btn btn-primary btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Landscape
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portrait Band Photo Card -->
+        <div class="glass-card asset-card">
+          <div class="asset-preview photo-preview">
+            <img src="/assets/band_photo_2026_portrait.JPG" alt="Possum Creek Pickers Band Photo (Portrait)" class="asset-img-photo asset-img-portrait" />
+          </div>
+          <div class="asset-details">
+            <h3 class="asset-name">Band Publicity Photo (Portrait)</h3>
+            <p class="asset-meta">JPG Format • High Resolution • Vertical Layout</p>
+            <div class="asset-actions">
+              <a href="/assets/band_photo_2026_portrait.JPG" target="_blank" class="btn btn-secondary btn-sm">Preview</a>
+              <a href="/assets/band_photo_2026_portrait.JPG" download="possum_creek_pickers_portrait.JPG" class="btn btn-primary btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Portrait
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Stage Photo Asset Card -->
+        <div class="glass-card asset-card">
+          <div class="asset-preview photo-preview">
+            <img src="/assets/band_live.JPEG" alt="Possum Creek Pickers Live Stage Performance" class="asset-img-photo" />
+          </div>
+          <div class="asset-details">
+            <h3 class="asset-name">Live Stage Performance Photo</h3>
+            <p class="asset-meta">JPEG Format • Stage Lighting & Performance Photography</p>
             <div class="asset-actions">
               <a href="/assets/band_live.JPEG" target="_blank" class="btn btn-secondary btn-sm">Preview</a>
               <a href="/assets/band_live.JPEG" download="possum_creek_pickers_live.JPEG" class="btn btn-primary btn-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download Photo
+                Download Live Photo
               </a>
             </div>
           </div>
@@ -429,8 +469,8 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   /* Assets Section */
   .assets-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 2rem;
     margin-top: 2.5rem;
   }
 
@@ -445,7 +485,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1.5rem;
     background: rgba(8, 12, 20, 0.7);
     border-bottom: 1px solid var(--border-glass);
   }
@@ -461,6 +501,11 @@ import BandMemberCard from '../components/BandMemberCard.astro';
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
+  }
+
+  .asset-img-portrait {
+    object-position: center 20%;
   }
 
   .asset-details {
