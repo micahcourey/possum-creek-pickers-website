@@ -12,10 +12,11 @@ export interface Props {
 const { 
   title, 
   description = "Possum Creek Pickers are an authentic bluegrass and acoustic band from Chattanooga, TN featuring Micah Courey, Elliott Brown, and Kevin Taylor.",
-  image = "/assets/band_live.JPEG"
+  image = "/assets/band_photo_2026_landscape.JPG?v=2026"
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://possumcreekpickers.com");
+const ogImageURL = new URL(image, Astro.site || "https://possumcreekpickers.com").href;
 ---
 
 <!DOCTYPE html>
@@ -23,7 +24,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://possumcr
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/assets/band_logo.png" />
+    <link rel="icon" type="image/png" href="/assets/band_logo.png?v=possums3" />
     
     <!-- Primary Meta Tags -->
     <title>{title} | Possum Creek Pickers | Bluegrass Band Chattanooga, TN</title>
@@ -31,19 +32,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://possumcr
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
 
-    <!-- Open Graph / Facebook / Instagram -->
+    <!-- Open Graph / iMessage / Facebook / Instagram / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={`${title} | Possum Creek Pickers`} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:secure_url" content={ogImageURL} />
+    <meta property="og:image:alt" content="Possum Creek Pickers Official Band Photo" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={`${title} | Possum Creek Pickers`} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={image} />
+    <meta property="twitter:image" content={ogImageURL} />
   </head>
   <body>
     <Header />
