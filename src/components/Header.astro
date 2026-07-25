@@ -23,6 +23,12 @@ const currentPath = pathname.replace(/\/$/, "");
         Home
       </a>
       <a 
+        href="/#shows" 
+        class="nav-link"
+      >
+        Tour
+      </a>
+      <a 
         href="/epk" 
         class={`nav-link ${currentPath === "/epk" ? "active" : ""}`}
       >
@@ -77,6 +83,7 @@ const currentPath = pathname.replace(/\/$/, "");
   <div id="mobile-drawer" class="mobile-drawer">
     <nav class="nav-mobile">
       <a href="/" class={`mobile-nav-link ${currentPath === "" ? "active" : ""}`}>Home</a>
+      <a href="/#shows" class="mobile-nav-link">Tour Dates</a>
       <a href="/epk" class={`mobile-nav-link ${currentPath === "/epk" ? "active" : ""}`}>Electronic Press Kit (EPK)</a>
       <div class="mobile-social-wrap">
         <a 
@@ -125,13 +132,16 @@ const currentPath = pathname.replace(/\/$/, "");
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 80px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    max-width: 1500px;
   }
 
   .brand-link {
     display: flex;
     align-items: center;
+    margin-right: 2.5rem;
     transition: transform 0.2s ease;
   }
 
@@ -150,6 +160,13 @@ const currentPath = pathname.replace(/\/$/, "");
     display: flex;
     align-items: center;
     gap: 2rem;
+  }
+
+  .header-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   .nav-link {
