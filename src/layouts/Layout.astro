@@ -12,11 +12,72 @@ export interface Props {
 const { 
   title, 
   description = "Possum Creek Pickers are an authentic bluegrass and acoustic band from Chattanooga, TN featuring Micah Courey, Elliott Brown, and Kevin Taylor.",
-  image = "/assets/band_photo_2026_landscape.JPG?v=2026"
+  image = "/assets/band_photo_2026_landscape_web.webp?v=2026"
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://possumcreekpickers.com");
 const ogImageURL = new URL(image, Astro.site || "https://possumcreekpickers.com").href;
+
+const jsonLdSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Possum Creek Pickers",
+  "url": "https://possumcreekpickers.com",
+  "logo": "https://possumcreekpickers.com/assets/band_logo.png",
+  "image": "https://possumcreekpickers.com/assets/band_photo_2026_landscape_web.webp",
+  "description": description,
+  "genre": ["Bluegrass", "Acoustic", "Americana", "Folk"],
+  "location": {
+    "@type": "Place",
+    "name": "Chattanooga, TN"
+  },
+  "member": [
+    {
+      "@type": "OrganizationRole",
+      "member": {
+        "@type": "Person",
+        "name": "Elliott Brown"
+      },
+      "roleName": "Lead Vocals & Guitar"
+    },
+    {
+      "@type": "OrganizationRole",
+      "member": {
+        "@type": "Person",
+        "name": "Micah Courey"
+      },
+      "roleName": "Mandolin & Backup Vocals"
+    },
+    {
+      "@type": "OrganizationRole",
+      "member": {
+        "@type": "Person",
+        "name": "Kevin Taylor"
+      },
+      "roleName": "Upright Bass & Backup Vocals"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/possumcreekpickers",
+    "https://www.youtube.com/@PossumCreekPickers"
+  ],
+  "event": [
+    {
+      "@type": "MusicEvent",
+      "name": "Possum Creek Pickers Live at Urban Stack",
+      "startDate": "2026-08-06T19:00:00-04:00",
+      "location": {
+        "@type": "Place",
+        "name": "Urban Stack",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chattanooga",
+          "addressRegion": "TN"
+        }
+      }
+    }
+  ]
+});
 ---
 
 <!DOCTYPE html>
@@ -47,6 +108,9 @@ const ogImageURL = new URL(image, Astro.site || "https://possumcreekpickers.com"
     <meta property="twitter:title" content={`${title} | Possum Creek Pickers`} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImageURL} />
+
+    <!-- Structured Data (JSON-LD) for Google MusicGroup Rich Results -->
+    <script type="application/ld+json" set:html={jsonLdSchema}></script>
   </head>
   <body>
     <Header />

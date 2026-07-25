@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import YouTubeGallery from '../components/YouTubeGallery.astro';
 import BandMemberCard from '../components/BandMemberCard.astro';
+import TourDates from '../components/TourDates.astro';
 ---
 
 <Layout title="Home">
@@ -9,9 +10,13 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   <section class="hero-section">
     <div class="hero-bg-wrapper">
       <img 
-        src="/assets/possum_creek.jpg" 
+        src="/assets/possum_creek.webp" 
         alt="Possum Creek - Soddy Daisy, Tennessee" 
         class="hero-bg-img"
+        fetchpriority="high"
+        loading="eager"
+        width="1600"
+        height="1200"
       />
       <div class="hero-overlay"></div>
     </div>
@@ -151,7 +156,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           instrument="Acoustic Guitar"
           bio="Driving the band rhythm and soaring vocal leads, Elliott brings heart and soul to every melody."
           iconType="guitar"
-          photoSrc="/assets/elliott_crop.jpg?v=2026"
+          photoSrc="/assets/elliott_crop.webp?v=2026"
         />
 
         <BandMemberCard 
@@ -160,7 +165,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           instrument="Mandolin"
           bio="Crafting chop rhythms and blistering lead runs that give Possum Creek Pickers its signature high lonesome sparkle."
           iconType="mandolin"
-          photoSrc="/assets/micah_crop.jpg?v=2026"
+          photoSrc="/assets/micah_crop.webp?v=2026"
         />
 
         <BandMemberCard 
@@ -169,7 +174,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           instrument="Upright Bass"
           bio="Laying down the deep acoustic foundation and driving rhythm pulse that keeps audiences stomping their feet."
           iconType="bass"
-          photoSrc="/assets/kevin_crop.jpg?v=2026"
+          photoSrc="/assets/kevin_crop.webp?v=2026"
         />
       </div>
     </div>
@@ -178,60 +183,8 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   <!-- YOUTUBE VIDEO SECTION -->
   <YouTubeGallery />
 
-  <!-- TOUR DATES: COMING SOON TO A VENUE NEAR YOU -->
-  <section class="section shows-section" id="shows">
-    <div class="container">
-      <div class="glass-card tour-coming-card">
-        <div class="tour-header text-center">
-          <span class="badge badge-earth">Live Shows & Booking</span>
-          <h2 class="section-title gradient-text-gold">Coming Soon To A Venue Near You!</h2>
-          <p class="tour-subtitle">
-            Possum Creek Pickers are preparing their upcoming live tour schedule across Tennessee, Georgia, North Carolina, and the Southeast. 
-          </p>
-        </div>
-
-        <div class="tour-grid">
-          <div class="tour-info-box">
-            <div class="info-badge-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <h3>Book Possum Creek Pickers In Your Town</h3>
-            <p>
-              We are actively accepting bookings for festivals, music halls, listening rooms, breweries, and private events. Bring authentic Chattanooga bluegrass picking to your stage!
-            </p>
-            <div class="tour-actions">
-              <a href="/epk#booking" class="btn btn-primary">
-                Book The Band (EPK)
-              </a>
-              <a href="mailto:possumcreekpickers@gmail.com" class="btn btn-secondary">
-                Request A Show
-              </a>
-            </div>
-          </div>
-
-          <div class="tour-social-box">
-            <div class="social-box-inner">
-              <svg class="insta-big-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-              </svg>
-              <h4>Be First to Hear Tour Announcements</h4>
-              <p>Follow <strong>@possumcreekpickers</strong> on Instagram to get show announcements, venue dates, and ticket links as soon as they drop!</p>
-              <a 
-                href="https://www.instagram.com/possumcreekpickers" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="btn btn-instagram btn-sm"
-              >
-                Follow @possumcreekpickers
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- TOUR DATES SECTION -->
+  <TourDates />
 
   <!-- INSTAGRAM CALLOUT BANNER -->
   <section class="section insta-banner-section">
@@ -345,7 +298,6 @@ import BandMemberCard from '../components/BandMemberCard.astro';
     line-height: 1.15;
     letter-spacing: -0.02em;
     color: var(--text-main);
-    padding-top: 8px;
   }
 
   .hero-subtitle {
@@ -443,7 +395,6 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   .section-heading {
     font-size: 2.4rem;
     font-weight: 800;
-    padding-top: 8px;
   }
 
   .story-text {

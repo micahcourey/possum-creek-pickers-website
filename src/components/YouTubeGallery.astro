@@ -6,19 +6,36 @@ export interface VideoItem {
   category: string;
 }
 
-const featuredVideo: VideoItem = {
-  id: "Usp1H0ny8wE",
-  title: "Possum Creek Pickers - Live Performance",
-  description: "Authentic bluegrass flatpicking, mandolin leads, and upright bass recorded live in East Tennessee.",
-  category: "Featured Performance"
-};
+const videos: VideoItem[] = [
+  {
+    id: "Usp1H0ny8wE",
+    title: "In The Gravel Yard / Stealin'",
+    description: "Authentic bluegrass flatpicking, mandolin leads, and upright bass recorded live in East Tennessee.",
+    category: "Featured Performance"
+  },
+  {
+    id: "htk9W0bEolc",
+    title: "Little Maggie",
+    description: "High-energy traditional bluegrass classic performed live by Possum Creek Pickers.",
+    category: "Live Performance"
+  },
+  {
+    id: "uuaCExW0Gwg",
+    title: "New Country Blues",
+    description: "Acoustic blues and driving rhythm performance recorded live in Chattanooga, TN.",
+    category: "Live Performance"
+  }
+];
+
+const featuredVideo = videos[0];
+const remainingVideos = videos.slice(1);
 ---
 
 <section class="youtube-section" id="videos">
   <div class="container">
     <div class="section-header text-center">
       <span class="badge badge-amber">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="red" stroke="red"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z" fill="white" stroke="white"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z" fill="white" stroke="white"/></svg>
         YouTube Channel & Media
       </span>
       <h2 class="section-title gradient-text">Live Pickin' & Videos</h2>
@@ -31,7 +48,7 @@ const featuredVideo: VideoItem = {
     <div class="glass-card yt-banner">
       <div class="yt-banner-content">
         <div class="yt-icon-wrapper">
-          <svg class="yt-logo-svg" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="#FF0000">
+          <svg class="yt-logo-svg" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="currentColor">
             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
         </div>
@@ -46,7 +63,7 @@ const featuredVideo: VideoItem = {
         rel="noopener noreferrer" 
         class="btn btn-secondary btn-sm yt-sub-btn"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="red" stroke="none"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
         Visit @PossumCreekPickers
       </a>
     </div>
@@ -55,7 +72,7 @@ const featuredVideo: VideoItem = {
     <div class="glass-card featured-video-card">
       <div class="featured-video-wrapper">
         <iframe 
-          src={`https://www.youtube.com/embed/${featuredVideo.id}`}
+          src={`https://www.youtube.com/embed/${featuredVideo.id}?cc_load_policy=0`}
           title={featuredVideo.title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
@@ -65,9 +82,9 @@ const featuredVideo: VideoItem = {
       </div>
       <div class="featured-video-info">
         <div class="featured-header">
-          <span class="badge badge-amber">{featuredVideo.category}</span>
+          <span class="badge badge-burgundy">{featuredVideo.category}</span>
           <a 
-            href={`https://youtu.be/${featuredVideo.id}`} 
+            href={`https://www.youtube.com/watch?v=${featuredVideo.id}`} 
             target="_blank" 
             rel="noopener noreferrer"
             class="watch-yt-link"
@@ -79,6 +96,40 @@ const featuredVideo: VideoItem = {
         <h3 class="featured-video-title">{featuredVideo.title}</h3>
         <p class="featured-video-desc">{featuredVideo.description}</p>
       </div>
+    </div>
+
+    <!-- Secondary Video Grid -->
+    <div class="video-grid">
+      {remainingVideos.map((video) => (
+        <div class="glass-card video-card">
+          <div class="video-wrapper">
+            <iframe 
+              src={`https://www.youtube.com/embed/${video.id}?cc_load_policy=0`}
+              title={video.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+              class="yt-iframe"
+            ></iframe>
+          </div>
+          <div class="video-card-info">
+            <div class="video-card-header">
+              <span class="badge badge-amber">{video.category}</span>
+              <a 
+                href={`https://www.youtube.com/watch?v=${video.id}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="watch-yt-link"
+              >
+                Watch on YouTube
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+            <h4 class="video-card-title">{video.title}</h4>
+            <p class="video-card-desc">{video.description}</p>
+          </div>
+        </div>
+      ))}
     </div>
   </div>
 </section>
@@ -170,12 +221,33 @@ const featuredVideo: VideoItem = {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    max-width: 960px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 2.5rem;
     border-color: rgba(27, 67, 44, 0.2);
   }
 
   .featured-video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .video-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-color: rgba(27, 67, 44, 0.2);
+    height: 100%;
+  }
+
+  .video-wrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -196,11 +268,20 @@ const featuredVideo: VideoItem = {
     background: var(--bg-card);
   }
 
-  .featured-header {
+  .featured-header, .video-card-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+  }
+
+  .video-card-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: var(--bg-card);
+    flex-grow: 1;
   }
 
   .watch-yt-link {
@@ -213,7 +294,7 @@ const featuredVideo: VideoItem = {
   }
 
   .watch-yt-link:hover {
-    color: var(--wood-mahogany);
+    color: var(--burgundy-red);
     text-decoration: underline;
   }
 
@@ -227,6 +308,24 @@ const featuredVideo: VideoItem = {
     color: var(--text-muted);
     font-size: 1.025rem;
     line-height: 1.6;
+  }
+
+  .video-card-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-main);
+  }
+
+  .video-card-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 900px) {
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (max-width: 768px) {

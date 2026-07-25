@@ -1,0 +1,267 @@
+---
+import { shows } from '../data/shows';
+---
+
+<section class="section shows-section" id="shows">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="badge badge-amber">Live Performances</span>
+      <h2 class="section-title gradient-text">Upcoming Tour Dates</h2>
+      <p class="section-subtitle">
+        Catch Possum Creek Pickers live on stage. More dates being added weekly across Tennessee and the Southeast!
+      </p>
+    </div>
+
+    {shows.length > 0 ? (
+      <div class="shows-list">
+        {shows.map((show) => (
+          <div class="glass-card show-card">
+            <div class="show-date-badge">
+              <span class="show-month">{show.formattedDate.month}</span>
+              <span class="show-day">{show.formattedDate.day}</span>
+              <span class="show-year">{show.formattedDate.year}</span>
+            </div>
+
+            <div class="show-details">
+              <div class="show-meta-top">
+                <span class="show-status-badge">{show.status || "Upcoming"}</span>
+                {show.formattedDate.dayOfWeek && (
+                  <span class="show-dow">{show.formattedDate.dayOfWeek}</span>
+                )}
+                {show.time && <span class="show-time">• {show.time}</span>}
+              </div>
+              <h3 class="show-venue">{show.venue}</h3>
+              <p class="show-location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                {show.city}, {show.state}
+                {show.notes && <span class="show-notes"> — {show.notes}</span>}
+              </p>
+            </div>
+
+            {show.ticketUrl && (
+              <div class="show-actions">
+                <a href={show.ticketUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Get Tickets
+                </a>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div class="glass-card tour-coming-card">
+        <p class="text-center">New tour dates dropping soon! Follow @possumcreekpickers on Instagram for live announcements.</p>
+      </div>
+    )}
+
+    <!-- Booking CTA Banner -->
+    <div class="glass-card tour-booking-banner">
+      <div class="booking-banner-content">
+        <h3>Want to book Possum Creek Pickers in your town?</h3>
+        <p>We are actively booking venues, festivals, listening rooms, breweries, and private events.</p>
+      </div>
+      <div class="booking-banner-actions">
+        <a href="/epk#booking" class="btn btn-primary btn-sm">
+          Book The Band
+        </a>
+        <a href="mailto:possumcreekpickers@gmail.com" class="btn btn-secondary btn-sm">
+          Email Inquiry
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    max-width: 720px;
+    margin: 0 auto 3.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .shows-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .show-card {
+    display: flex;
+    align-items: center;
+    padding: 1.75rem 2.25rem;
+    gap: 2rem;
+    width: 100%;
+    border-color: rgba(27, 67, 44, 0.2);
+    transition: all 0.25s ease;
+  }
+
+  .show-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--forest-green);
+    box-shadow: 0 8px 30px rgba(27, 67, 44, 0.12);
+  }
+
+  .show-date-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--forest-green), var(--forest-mid));
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-md);
+    min-width: 90px;
+    box-shadow: 0 4px 15px rgba(27, 67, 44, 0.2);
+  }
+
+  .show-month {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .show-day {
+    font-size: 1.75rem;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0.15rem 0;
+  }
+
+  .show-year {
+    font-size: 0.75rem;
+    opacity: 0.9;
+  }
+
+  .show-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .show-meta-top {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .show-status-badge {
+    background: rgba(156, 36, 53, 0.1);
+    color: var(--burgundy-red);
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  .show-dow {
+    font-weight: 700;
+    color: var(--forest-green);
+  }
+
+  .show-venue {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+  }
+
+  .show-location {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .show-location svg {
+    color: var(--forest-green);
+  }
+
+  .show-notes {
+    font-style: italic;
+    color: var(--forest-green);
+  }
+
+  .show-actions {
+    white-space: nowrap;
+  }
+
+  .tour-booking-banner {
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(27, 67, 44, 0.06), rgba(156, 36, 53, 0.05));
+    border-color: rgba(27, 67, 44, 0.2);
+  }
+
+  .booking-banner-content h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+  }
+
+  .booking-banner-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .booking-banner-actions {
+    display: flex;
+    gap: 0.75rem;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .show-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .show-date-badge {
+      flex-direction: row;
+      gap: 0.5rem;
+      min-width: auto;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .show-actions {
+      width: 100%;
+    }
+
+    .show-actions .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .tour-booking-banner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .booking-banner-actions {
+      width: 100%;
+    }
+
+    .booking-banner-actions .btn {
+      flex: 1;
+      text-align: center;
+    }
+  }
+</style>

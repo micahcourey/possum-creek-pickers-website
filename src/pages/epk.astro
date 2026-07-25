@@ -122,7 +122,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           instrument="Acoustic Guitar"
           bio="Elliott leads the band's vocal melodies and rhythmic acoustic engine with powerful flatpicking and genuine storytelling."
           iconType="guitar"
-          photoSrc="/assets/elliott_crop.jpg?v=2026"
+          photoSrc="/assets/elliott_crop.webp?v=2026"
         />
 
         <BandMemberCard 
@@ -131,7 +131,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           instrument="Mandolin"
           bio="Micah delivers intricate mandolin chops, lightning lead runs, and tight harmony backing vocals."
           iconType="mandolin"
-          photoSrc="/assets/micah_crop.jpg?v=2026"
+          photoSrc="/assets/micah_crop.webp?v=2026"
         />
 
         <BandMemberCard 
@@ -140,7 +140,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
           instrument="Bass"
           bio="Kevin grounds the band with deep acoustic bass grooves and solid vocal support that drives the rhythmic engine."
           iconType="bass"
-          photoSrc="/assets/kevin_crop.jpg?v=2026"
+          photoSrc="/assets/kevin_crop.webp?v=2026"
         />
       </div>
     </div>
@@ -156,17 +156,35 @@ import BandMemberCard from '../components/BandMemberCard.astro';
       </div>
 
       <div class="assets-grid">
-        <!-- Logo Asset Card -->
+        <!-- Logo Asset Card (Transparent) -->
         <div class="glass-card asset-card">
           <div class="asset-preview logo-preview">
-            <img src="/assets/band_logo.png?v=possums3" alt="Possum Creek Pickers Official Logo" class="asset-img-logo" />
+            <img src="/assets/band_logo.png?v=possums3" alt="Possum Creek Pickers Official Logo (Transparent)" class="asset-img-logo" />
           </div>
           <div class="asset-details">
-            <h3 class="asset-name">Official Band Logo</h3>
+            <h3 class="asset-name">Official Band Logo (Transparent)</h3>
             <p class="asset-meta">PNG Format • Transparent Background • High Resolution</p>
             <div class="asset-actions">
               <a href="/assets/band_logo.png" target="_blank" class="btn btn-secondary btn-sm">Preview</a>
-              <a href="/assets/band_logo.png" download="possum_creek_pickers_logo.png" class="btn btn-primary btn-sm">
+              <a href="/assets/band_logo.png" download="possum_creek_pickers_logo_transparent.png" class="btn btn-primary btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Logo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logo Asset Card (Black Background) -->
+        <div class="glass-card asset-card">
+          <div class="asset-preview logo-preview" style="background: #000;">
+            <img src="/assets/band_logo_black.JPEG" alt="Possum Creek Pickers Official Logo (Black Background)" class="asset-img-logo" />
+          </div>
+          <div class="asset-details">
+            <h3 class="asset-name">Official Band Logo (Black Background)</h3>
+            <p class="asset-meta">JPEG Format • Solid Black Background • High Resolution</p>
+            <div class="asset-actions">
+              <a href="/assets/band_logo_black.JPEG" target="_blank" class="btn btn-secondary btn-sm">Preview</a>
+              <a href="/assets/band_logo_black.JPEG" download="possum_creek_pickers_logo_black.JPEG" class="btn btn-primary btn-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download Logo
               </a>
@@ -177,7 +195,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
         <!-- Landscape Band Photo Card -->
         <div class="glass-card asset-card">
           <div class="asset-preview photo-preview">
-            <img src="/assets/band_photo_2026_landscape.JPG" alt="Possum Creek Pickers Band Photo (Landscape)" class="asset-img-photo" />
+            <img src="/assets/band_photo_2026_landscape_web.webp" alt="Possum Creek Pickers Band Photo (Landscape)" class="asset-img-photo" />
           </div>
           <div class="asset-details">
             <h3 class="asset-name">Band Publicity Photo (Landscape)</h3>
@@ -195,7 +213,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
         <!-- Portrait Band Photo Card -->
         <div class="glass-card asset-card">
           <div class="asset-preview photo-preview">
-            <img src="/assets/band_photo_2026_portrait.JPG" alt="Possum Creek Pickers Band Photo (Portrait)" class="asset-img-photo asset-img-portrait" />
+            <img src="/assets/band_photo_2026_portrait_web.webp" alt="Possum Creek Pickers Band Photo (Portrait)" class="asset-img-photo asset-img-portrait" />
           </div>
           <div class="asset-details">
             <h3 class="asset-name">Band Publicity Photo (Portrait)</h3>
@@ -213,7 +231,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
         <!-- Live Stage Photo Asset Card -->
         <div class="glass-card asset-card">
           <div class="asset-preview photo-preview">
-            <img src="/assets/band_live.JPEG" alt="Possum Creek Pickers Live Stage Performance" class="asset-img-photo" />
+            <img src="/assets/band_live_web.webp" alt="Possum Creek Pickers Live Stage Performance" class="asset-img-photo" />
           </div>
           <div class="asset-details">
             <h3 class="asset-name">Live Stage Performance Photo</h3>
@@ -339,7 +357,7 @@ import BandMemberCard from '../components/BandMemberCard.astro';
             <div class="contact-icon insta-icon-bg">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </div>
-            <h3>Instagram DM</h3>
+            <h3>Instagram</h3>
             <p>Connect with us on social media:</p>
             <a href="https://www.instagram.com/possumcreekpickers" target="_blank" rel="noopener noreferrer" class="contact-link">@possumcreekpickers</a>
           </div>
@@ -384,7 +402,6 @@ import BandMemberCard from '../components/BandMemberCard.astro';
     margin-top: 0.5rem;
     margin-bottom: 0.25rem;
     color: var(--text-main);
-    padding-top: 8px;
   }
 
   .epk-tagline {
@@ -564,7 +581,6 @@ import BandMemberCard from '../components/BandMemberCard.astro';
   .tech-title {
     font-size: 2rem;
     font-weight: 800;
-    padding-top: 8px;
   }
 
   .tech-desc {
