@@ -272,23 +272,21 @@ img {
   font-size: 0.875rem;
 }
 
-/* Gradient Text Effect for Light Theme */
-.gradient-text {
-  background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-mid) 50%, var(--forest-bright) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text-gold {
-  background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-mid) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+/* Text Color Utilities */
+.text-burgundy,
 .gradient-text-burgundy {
-  background: linear-gradient(135deg, var(--burgundy-red) 0%, var(--burgundy-light) 60%, var(--forest-green) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--burgundy-red);
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+.gradient-text,
+.gradient-text-gold {
+  color: var(--forest-green);
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
 }
 
 /* Animations */

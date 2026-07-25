@@ -47,7 +47,7 @@ import TourDates from '../components/TourDates.astro';
         </div>
 
         <h1 class="hero-title">
-          Authentic Picking Born on the Banks of <span class="gradient-text-burgundy">Possum Creek</span>
+          Authentic Picking Born on the Banks of Possum Creek
         </h1>
 
         <p class="hero-subtitle">
@@ -55,11 +55,6 @@ import TourDates from '../components/TourDates.astro';
         </p>
 
         <div class="hero-actions">
-          <a href="/epk" class="btn btn-burgundy">
-            Explore Press Kit (EPK)
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          
           <a href="#videos" class="btn btn-secondary">
             Watch Performances
           </a>
@@ -76,6 +71,11 @@ import TourDates from '../components/TourDates.astro';
               <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
             </svg>
             @possumcreekpickers
+          </a>
+
+          <a href="/epk" class="btn btn-burgundy">
+            Explore Press Kit (EPK)
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
       </div>
@@ -264,9 +264,9 @@ import TourDates from '../components/TourDates.astro';
     align-items: center;
     gap: 1.5rem;
     padding: 2.75rem 2.25rem;
-    background: rgba(255, 253, 248, 0.88);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: rgba(246, 243, 235, 0.5);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
     border: 1px solid rgba(27, 67, 44, 0.2);
     border-radius: var(--radius-lg);
     box-shadow: 0 16px 45px -10px rgba(27, 67, 44, 0.15), 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -302,7 +302,8 @@ import TourDates from '../components/TourDates.astro';
 
   .hero-subtitle {
     font-size: 1.25rem;
-    color: var(--text-muted);
+    color: var(--burgundy-red);
+    font-weight: 600;
     max-width: 680px;
     line-height: 1.6;
   }
