@@ -15,7 +15,9 @@ const {
   image = "/assets/band_photo_2026_landscape_web.webp?v=2026"
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://possumcreekpickers.com");
+const rawPath = Astro.url.pathname.replace(/\/$/, "");
+const canonicalPath = rawPath === "" ? "/" : rawPath;
+const canonicalURL = new URL(canonicalPath, Astro.site || "https://possumcreekpickers.com");
 const ogImageURL = new URL(image, Astro.site || "https://possumcreekpickers.com").href;
 
 const jsonLdSchema = JSON.stringify({
